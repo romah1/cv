@@ -1,131 +1,140 @@
-\documentclass{cv} % Use the custom resume.cls style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV - RESUME CLASS FILE
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% This class file defines the structure and design of the template. 
+%
+% Original header:
+% Copyright (C) 2010 by Trey Hunner
+%
+% Copying and distribution of this file, with or without modification,
+% are permitted in any medium without royalty provided the copyright
+% notice and this notice are preserved. This file is offered as-is,
+% without any warranty.
+%
+% Created by Trey Hunner and modified by www.LaTeXTemplates.com
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Roman Teriaev} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-% \address{+7 (982) 481 00 71 \\ San Francisco, CA} 
-\address{\href{mailto:work.romah1@gmail.com}{work.romah1@gmail.com} \\
-\href{https://github.com/romah1}{github.com/romah1} \\
-\href{https://t.me/romah1_1}{t.me/romah1\_1} }  %
+\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\begin{document}
+\LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
-%----------------------------------------------------------------------------------------
-%	OBJECTIVE
-%----------------------------------------------------------------------------------------
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{xcolor}
 
-% \begin{rSection}{OBJECTIVE}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
-% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
-
-
-% \end{rSection}
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-
-ITMO University \hfill {\normalfont {\emph {August 2020 - June 2024}}} \\
-{\normalfont  B.S in Computer Science \hfill {St.Petersburg, Russia} }
-% Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
-
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
-%----------------------------------------------------------------------------------------
-% \begin{rSection}{SKILLS}
-
-% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-% Technical Skills & A, B, C, D
-% \\
-% Soft Skills & A, B, C, D\\
-% XYZ & A, B, C, D\\
-% \end{tabular}\\
-% \end{rSection}
-
-\begin{rSection}{EXPERIENCE}
-
-\textbf{Middle iOS Developer} \hfill \normalfont {\emph{August 2022 - Present}}\\
- Yandex \hfill \textit{\normalfont{St.Petersburg, Russia}}
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Integrated iOS 16 Shortcuts metadata generation to GN build system which allowed other developers to create new shortcuts with AppIntents framework
-     \item Created new onboarding screens that were seen by more than 100k users
-     \item Took part in developing of a new feature called WebStore based on DivKit framework which is used by more than 70k users every week
- \end{itemize}
- 
-\textbf{Intern iOS Developer} \hfill \emph{February 2022 - August 2022}\\
- Yandex \hfill \textit{\normalfont{St.Petersburg, Russia}}
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Achieved 60\% incremental build speed up by refactoring dependencies
-     \item Developed .xcresult to Allure report parser and integrated it in test run system which led to great improvement in QA workflow
-     \item Implemented private data transfer between two applications using UniversalLinks redirection that was used by more than 120k users a week
- \end{itemize}
- 
- \textbf{Software Engineer Intern} \hfill \emph{July 2021 - September 2021}\\
-Itiviti \hfill \textit{\normalfont{St.Petersburg, Russia}}
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Developed Python tool that geterates C++ classes with description of stock market messages based on json data
- \end{itemize}
-
-\end{rSection} 
+\pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{PROJECTS}
- \textbf{SolNinja}
- \normalfont{\href{https://twitter.com/SolNinja_tools}{Twitter}}
- \begin{itemize}
-    \itemsep -3pt {}
-     \item Created own cross-platform application with more than 1250 followers on Twitter and around 150 active users
-     \item Implemented interaction with Solana Blockchain using Go programming language and solana-go and anchor-go libraries
-     \item Improved leader skills, organized workflow and led the project to success
- \end{itemize}
- 
- \textbf{Solana Wallet Manager}
- \normalfont{\href{https://github.com/romah1/solana-go-wm}{GitHub}}
- \begin{itemize}
-    \itemsep -3pt {}
-     \item Developed an extension for solana-go library that allows to interact with Token, AuctionHouse and System programs
- \end{itemize}
- \textbf{Cellular Automata Simulator}
- \normalfont{\href{https://github.com/romah1/IOSCellularAutomataSimulator}{GitHub}}
- \begin{itemize}
-    \itemsep -3pt {}
-     \item Studied Swift, UIKit and SwiftUI. Learned to work with network and user's local storage
-     \item Developed custom cellular field with selection that allows to copy, paste, rotate and clear on user's field
-     \item Created library where users can share their works with others
-     \item Got the highest mark for this homework out of 24 students. Implemented all the additional tasks
- \end{itemize}
-% \vspace{-1.25em}
-% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
-% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C. This project's description spans two lines and also won an award.}
-\end{rSection} 
+\def \name#1{\def\@name{#1}} % Defines the \name command to set name
+\def \@name {} % Sets \@name to empty by default
+
+\def \addressSep {$\diamond$} % Set default address separator to a diamond
+
+% One, two or three address lines can be specified 
+\let \@addressone \relax
+\let \@addresstwo \relax
+\let \@addressthree \relax
+
+% \address command can be used to set the first, second, and third address (last 2 optional)
+\def \address #1{
+  \@ifundefined{@addresstwo}{
+    \def \@addresstwo {#1}
+  }{
+  \@ifundefined{@addressthree}{
+  \def \@addressthree {#1}
+  }{
+     \def \@addressone {#1}
+  }}
+}
+
+% \printaddress is used to style an address line (given as input)
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+  \addressskip
+}
+
+% \printname is used to print the name as a page header
+\def \printname {
+  \begingroup
+    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
 
 %----------------------------------------------------------------------------------------
-% \begin{rSection}{Achievements} 
-% \begin{itemize}
-%     \item 	3-rd degree diploma in Phystech olympiad in Mathematics
-%     \item	2-nd degree diploma in ITMO math olympiad.
-% \end{itemize}
-% \end{rSection}
+%	PRINT THE HEADING LINES
+%----------------------------------------------------------------------------------------
+
+\let\ori@document=\document
+\renewcommand{\document}{
+  \ori@document  % Begin document
+  \printname % Print the name specified with \name
+  \@ifundefined{@addressone}{}{ % Print the first address if specified
+    \printaddress{\@addressone}}
+  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    \printaddress{\@addresstwo}}
+     \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    \printaddress{\@addressthree}}
+}
 
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Skills} 
-\textbf{Programming languages and Frameworks} \hfill \normalfont{Go, Swift, C++, Java, JavaScript, Python, SQL, SwiftUI, UIKit} \\
-\textbf{Software and tools} \hfill \normalfont{Git, Bitbucket, TeamCity}
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
 
-\end{rSection}
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+  \MakeUppercase{\bf #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{0em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
 
-\end{document}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0.5em} % Some space after the list of bullet points
+}
+
+% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
+\def\namesize{\LARGE} % Size of the name at the top of the document
+\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\nameskip{\medskip} % The space after your name at the top
+\def\sectionskip{\medskip} % The space after the heading section

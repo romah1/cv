@@ -1,197 +1,131 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass{cv} % Use the custom resume.cls style
 
-\usepackage{latexsym}
-\usepackage{xcolor}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{multicol}
-\input{glyphtounicode}
-
-\usepackage[default]{sourcesanspro}
-\usepackage[T1]{fontenc}
-
-\pagestyle{fancy}
-\fancyhf{} 
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-\titleformat{\section}{
-  \vspace{-4pt}\centering
-}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
-
-\pdfgentounicode=1
-
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Roman Teriaev} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+% \address{+7 (982) 481 00 71 \\ San Francisco, CA} 
+\address{\href{mailto:work.romah1@gmail.com}{work.romah1@gmail.com} \\
+\href{https://github.com/romah1}{github.com/romah1} \\
+\href{https://t.me/romah1_1}{t.me/romah1\_1} }  %
 
 \begin{document}
 
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+% \begin{rSection}{OBJECTIVE}
+
+% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
 
 
-\begin{center}
-    {\LARGE Roman Teriaev} \\ \vspace{2pt}
-    \begin{multicols}{2}
-    \begin{flushleft}
-    Location: St.Petersburg, Russia\\
-    Email: work.romah1@gmail.com\\
-    GitHub:\
-    \href{{https://github.com/romah1}}{\color{blue}romah1}\\
-    LinkedIn:\
-    \href{{https://www.linkedin.com/in/roman-teriaev-939b06250/}}{\color{blue}link}\\
-    \end{flushleft}
-    
-    \begin{flushright}
-    Telegram:\
-    \href{{https://t.me/romah1_1}}{\color{blue}@romah1\_1}\\
-    Phone: +79824810071\\
-    Discord: romah\#5912\\
-    \end{flushright}
-    \end{multicols}
-\end{center}
+% \end{rSection}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+ITMO University \hfill {\normalfont {\emph {August 2020 - June 2024}}} \\
+{\normalfont  B.S in Computer Science \hfill {St.Petersburg, Russia} }
+% Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
 
 
-%-----------EDUCATION-----------
-\vspace{-2pt}
-\section{Education}
-  \resumeSubHeadingListStart
-      \resumeSubheading
-      {ITMO University}{September 2020 -- Present}
-      {CT ITMO. Bachelor's degree in Computer Science}{Russia}
+\end{rSection}
 
-  \resumeSubHeadingListEnd
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{SKILLS}
 
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Technical Skills & A, B, C, D
+% \\
+% Soft Skills & A, B, C, D\\
+% XYZ & A, B, C, D\\
+% \end{tabular}\\
+% \end{rSection}
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-   \resumeSubheading
-    {Career summary}{}{}{}
-    \begin{enumerate}
-    \item August 2022 - Present: Middle iOS developer at Yandex:
-        \begin{itemize}
-            \item Developing new features for Yandex Browser and Yandex Search App
-            \item Integrated iOS 16 Shortcuts metadata generation in the build system
-        \end{itemize}
-    \item Feb 2022 - August 2022: iOS internship at Yandex:
-        \begin{itemize}
-            \item Developed .xcresult to Allure parser that is used to show tests run report in TeamCity
-            \item Learned how GN build system works
-            \item Took part in speeding up build time by refactoring modules dependencies
-            \item Improved knowledge of iOS applications architecture
-        \end{itemize}   
-    \item Summer 2021: C++ internship at Itiviti
-        \begin{itemize}
-            \item Made Python tool that generates C++ DTO classes describing stock market messages
-        \end{itemize} 
-    \end{enumerate}
-    \resumeSubheading
-    {Projects}{}{}{}
-    \begin{enumerate}
-    \item SolNinja:
-    \href{https://twitter.com/SolNinja_tools}{\color{blue}Twitter},
-    \href{https://drive.google.com/file/d/1hhUjACn6zVBfZ9Z1rawXxxgSBoS8GXri/view?usp=sharing}{\color{blue}Disk}.
-        \begin{itemize}
-            \item Improved skills in Go programming language
-            \item Learned solana-go library to interact with Solana blockchain
-            \item Managed to create own cross-platform application with go-astilectron library
-            \item Practiced creating UI with Js+Html+Css
-            \item Improved leader skills
-            \item Having great experience in driving the community, working with social media
-        \end{itemize}
-    \item IOS cellular automata simulator:
-    \href{https://github.com/romah1/IOSCellularAutomataSimulator}{\color{blue}Github}
-        \begin{itemize}
-            \item Studied Swift programming language
-            \item Learned to work with network on Swift
-            \item Developed an ability to work with user data (saving, caching, etc.)
-            \item Learned SwiftUI and UIKit
-            \item Supported a lot of custom features, that make this app unique and nice to use. For example, custom cellular field with selection, that allows copying, pasting and many other cool things
-        \end{itemize}
-        \item C++ Combinations:
-    \href{https://github.com/romah1/combinations}{\color{blue}Github}
-        \begin{itemize}
-            \item Improved c++ knowledge
-            \item Learned to work with libraries
-            \item Worked out an algorithm to identify combination
-        \end{itemize}
-    \end{enumerate}
-  \resumeSubHeadingListEnd
+\begin{rSection}{EXPERIENCE}
 
-%-----------SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{OS}{: MacOS} \\
-     \textbf{Programming Languages}{: Go, Swift, Java, JavaScript, C/C++, Python} \\
-     \textbf{Technologies}{: solana-go, go-astilectron, SwiftUI, UIKit, GN, SQL}\\
-     \textbf{Version Control}{: Git} \\
-     \textbf{Languages}{: Russian (native), English (fluent)} \\
-    }}
+\textbf{Middle iOS Developer} \hfill \normalfont {\emph{August 2022 - Present}}\\
+ Yandex \hfill \textit{\normalfont{St.Petersburg, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Integrated iOS 16 Shortcuts metadata generation to GN build system which allowed other developers to create new shortcuts with AppIntents framework
+     \item Created new onboarding screens that were seen by more than 100k users
+     \item Took part in developing of a new feature called WebStore based on DivKit framework which is used by more than 70k users every week
+ \end{itemize}
+ 
+\textbf{Intern iOS Developer} \hfill \emph{February 2022 - August 2022}\\
+ Yandex \hfill \textit{\normalfont{St.Petersburg, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Achieved 60\% incremental build speed up by refactoring dependencies
+     \item Developed .xcresult to Allure report parser and integrated it in test run system which led to great improvement in QA workflow
+     \item Implemented private data transfer between two applications using UniversalLinks redirection that was used by more than 120k users a week
+ \end{itemize}
+ 
+ \textbf{Software Engineer Intern} \hfill \emph{July 2021 - September 2021}\\
+Itiviti \hfill \textit{\normalfont{St.Petersburg, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Developed Python tool that geterates C++ classes with description of stock market messages based on json data
  \end{itemize}
 
-%-----------OTHER-----------
-\section{Other}
-\resumeSubHeadingListStart
-    \begin{enumerate}
-        \item Have good knowledge of basic algorithms and data structures
-    \end{enumerate}
-    \resumeSubHeadingListEnd
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+ \textbf{SolNinja}
+ \normalfont{\href{https://twitter.com/SolNinja_tools}{Twitter}}
+ \begin{itemize}
+    \itemsep -3pt {}
+     \item Created own cross-platform application with more than 1250 followers on Twitter and around 150 active users
+     \item Implemented interaction with Solana Blockchain using Go programming language and solana-go and anchor-go libraries
+     \item Improved leader skills, organized workflow and led the project to success
+ \end{itemize}
+ 
+ \textbf{Solana Wallet Manager}
+ \normalfont{\href{https://github.com/romah1/solana-go-wm}{GitHub}}
+ \begin{itemize}
+    \itemsep -3pt {}
+     \item Developed an extension for solana-go library that allows to interact with Token, AuctionHouse and System programs
+ \end{itemize}
+ \textbf{Cellular Automata Simulator}
+ \normalfont{\href{https://github.com/romah1/IOSCellularAutomataSimulator}{GitHub}}
+ \begin{itemize}
+    \itemsep -3pt {}
+     \item Studied Swift, UIKit and SwiftUI. Learned to work with network and user's local storage
+     \item Developed custom cellular field with selection that allows to copy, paste, rotate and clear on user's field
+     \item Created library where users can share their works with others
+     \item Got the highest mark for this homework out of 24 students. Implemented all the additional tasks
+ \end{itemize}
+% \vspace{-1.25em}
+% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C. This project's description spans two lines and also won an award.}
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{Achievements} 
+% \begin{itemize}
+%     \item 	3-rd degree diploma in Phystech olympiad in Mathematics
+%     \item	2-nd degree diploma in ITMO math olympiad.
+% \end{itemize}
+% \end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills} 
+\textbf{Programming languages and Frameworks} \hfill \normalfont{Go, Swift, C++, Java, JavaScript, Python, SQL, SwiftUI, UIKit} \\
+\textbf{Software and tools} \hfill \normalfont{Git, Bitbucket, TeamCity}
+
+\end{rSection}
 
 \end{document}

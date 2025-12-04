@@ -1,140 +1,127 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV - RESUME CLASS FILE
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% This class file defines the structure and design of the template. 
-%
-% Original header:
-% Copyright (C) 2010 by Trey Hunner
-%
-% Copying and distribution of this file, with or without modification,
-% are permitted in any medium without royalty provided the copyright
-% notice and this notice are preserved. This file is offered as-is,
-% without any warranty.
-%
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{cv} % Use the custom resume.cls style
 
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Roman Teriaev} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+% \address{+7 (982) 481 00 71 \\ San Francisco, CA} 
+\address{\href{mailto:work.romah1@gmail.com}{work.romah1@gmail.com} \\
+\href{https://github.com/romah1}{github.com/romah1} \\
+\href{https://t.me/romah1_1}{t.me/romah1\_1} }  %
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
-
-\usepackage[parfill]{parskip} % Remove paragraph indentation
-\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{xcolor}
-
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
-
-\pagestyle{empty} % Suppress page numbers
+\begin{document}
 
 %----------------------------------------------------------------------------------------
-%	HEADINGS COMMANDS: Commands for printing name and address
+%	OBJECTIVE
 %----------------------------------------------------------------------------------------
 
-\def \name#1{\def\@name{#1}} % Defines the \name command to set name
-\def \@name {} % Sets \@name to empty by default
+% \begin{rSection}{OBJECTIVE}
 
-\def \addressSep {$\diamond$} % Set default address separator to a diamond
+% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
 
-% One, two or three address lines can be specified 
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
 
-% \address command can be used to set the first, second, and third address (last 2 optional)
-\def \address #1{
-  \@ifundefined{@addresstwo}{
-    \def \@addresstwo {#1}
-  }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
-}
-
-% \printaddress is used to style an address line (given as input)
-\def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
-}
-
-% \printname is used to print the name as a page header
-\def \printname {
-  \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
-  \endgroup
-}
-
+% \end{rSection}
 %----------------------------------------------------------------------------------------
-%	PRINT THE HEADING LINES
+%	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\let\ori@document=\document
-\renewcommand{\document}{
-  \ori@document  % Begin document
-  \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
-}
+\begin{rSection}{Education}
+
+ITMO University \hfill {\normalfont {\emph {August 2020 - June 2024}}} \\
+{\normalfont  B.S in Computer Science \hfill {St.Petersburg, Russia} }
+% Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+
+\end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	SECTION FORMATTING
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{SKILLS}
+
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Technical Skills & A, B, C, D
+% \\
+% Soft Skills & A, B, C, D\\
+% XYZ & A, B, C, D\\
+% \end{tabular}\\
+% \end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Senior Backend Developer} \hfill \normalfont {\emph{July 2024 - Dec 2025}}\\
+ Ozon \hfill \textit{\normalfont{Moscow, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {}
+     \item Designed and implemented the migration of billions of users' reviews onto new sharded PostgreSQL database
+     \item Implemented new review list which holds up to 50k RPS
+     \item Resolved reviews-service stability problems by using profiling and multi thread programming knowledge which reduced resource usage by 60\%
+     \item Tech leaded the development and designed the architecture for various projects
+ \end{itemize}
+
+\textbf{Backend Developer} \hfill \normalfont {\emph{June 2023 - July 2024}}\\
+ Yandex.Eats \hfill \textit{\normalfont{Moscow, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Tech leaded the development of new events shipping flow between services, which led to absence of order status hanging on order tracking screen
+     \item Tech leaded the development of new micro service that loads and classifies feedbacks using ChatGPT
+     \item Implemented construction of spherical equilateral triangle on the map, which allowed to increase company income by showing additional advertisement
+ \end{itemize}
+
+\textbf{iOS Developer} \hfill \normalfont {\emph{August 2022 - June 2023}}\\
+ Yandex.Browser \hfill \textit{\normalfont{St.Petersburg, Russia}}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Integrated iOS 16 Shortcuts metadata generation to GN build system which allowed other developers to create new shortcuts with AppIntents framework
+     \item Created new onboarding screens that were seen by more than 100k users
+     \item Took part in developing of a new feature called WebStore based on DivKit framework which is used by more than 70k users every week
+ \end{itemize}
+
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-% Defines the rSection environment for the large sections within the CV
-\newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
-  \MakeUppercase{\bf #1} % Section title
-  \sectionlineskip
-  \hrule % Horizontal line
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0em} % Margin within the section
-  }
-  \item[]
-}{
-  \end{list}
-}
+\begin{rSection}{PROJECTS}
+ \textbf{Degens.Vision}
+ \normalfont{\href{https://github.com/romah1/degens.vision}{GitHub}}
+ \begin{itemize}
+ \itemsep -3pt {}
+    \item Designed the microservice architecture of horizontal scalable application on Go, PostgreSQL, RabbitMQ, Kafka
+    \item Implemented blockchain parser and interactions with NFT smart contracts
+    \item Utilized Kafka for scaling WebSocket connections on multiple application instances
+ \end{itemize}
+ \textbf{SolNinja}
+ \normalfont{\href{https://twitter.com/SolNinja_tools}{Twitter}}
+ \begin{itemize}
+    \itemsep -3pt {}
+     \item Created own cross-platform application with more than 1250 followers on Twitter and around 150 active users
+     \item Implemented interaction with Solana Blockchain using Golang and solana-go and anchor-go libraries
+     \item Improved leader skills, organized workflow and led the project to success
+ \end{itemize}
+% \vspace{-1.25em}
+% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+% \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C. This project's description spans two lines and also won an award.}
+\end{rSection} 
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
+% \begin{rSection}{Achievements} 
+% \begin{itemize}
+%     \item 	3-rd degree diploma in Phystech olympiad in Mathematics
+%     \item	2-nd degree diploma in ITMO math olympiad.
+% \end{itemize}
+% \end{rSection}
+
 %----------------------------------------------------------------------------------------
+\begin{rSection}{Skills} 
+\textbf{Programming languages and Frameworks} \hfill \normalfont{Go, C++, Python, SQL, TypeScript} \\
+\textbf{Software and tools} \hfill \normalfont{PostgreSQL, Redis, MongoDB, Memcached, RabbitMQ, Kafka, Docker, Git}
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
-}
+\end{rSection}
 
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\LARGE} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\medskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\end{document}
